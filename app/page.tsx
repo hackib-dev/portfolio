@@ -27,12 +27,11 @@ import ReactIcon from "../assets/React-icon.png";
 import Shadcn from "../assets/shadcn.png";
 import Sql from "../assets/sql.png";
 import Tools from "../assets/tools.png";
-import AOS from "aos";
-import { useEffect, useState } from "react";
-import "aos/dist/aos.css";
 import { MenuIcon, Phone, X } from "lucide-react";
 import Mail from "../assets/mail.png";
 import Linkedin from "../assets/Linkdin.png";
+import { useState } from "react";
+import Kenntechs from "../assets/kenntechs.png";
 
 const App = () => {
   const bgImage = {
@@ -45,10 +44,6 @@ const App = () => {
   const toggleMenu = () => {
     setIsOpenMenu(!isOpenMenu);
   };
-
-  useEffect(() => {
-    AOS.init();
-  }, []);
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -177,8 +172,8 @@ const App = () => {
         className="flex flex-col items-center justify-center min-h-screen px-5 md:px-44 mx-auto text-center gap-y-2 md:gap-y-10"
         id="about"
       >
-        <div className="flex bg-[#232230] rounded-xl items-center justify-between mx-5 md:mx-20 mt-60 md:mt-0 ">
-          <div className="flex gap-x-3 md:gap-x-5 px-9 md:px-10 items-center">
+        <div className="flex bg-[#232230] rounded-xl items-center justify-between mx-0 md:mx-20 mt-60 md:mt-0 ">
+          <div className="flex gap-x-3 md:gap-x-5 px-3 md:px-10 items-center">
             <div>
               <Image
                 src={Profile}
@@ -191,18 +186,18 @@ const App = () => {
                 <p>Aqib Akinyele K.</p>
                 <Image src={Nigeria} alt="Nigeria"></Image>
               </div>
-              <div className="flex gap-x-2 md:gap-x-5">
+              <div className="flex gap-x-2 justify-center md:gap-x-5">
                 <div className="flex  items-center gap-1 md:gap-2 text-white">
                   <Image src={Engineer} alt="engineer"></Image>
-                  <p className="text-[8px] md:text-base ">Frontend Developer</p>
+                  <p className="text-[9px] md:text-base ">Frontend Developer</p>
                 </div>
                 <div className="flex items-center gap-1 md:gap-2 text-white">
                   <Image src={Location} alt="location"></Image>
-                  <p className="text-[8px] md:text-base ">Everywhere</p>
+                  <p className="text-[9px] md:text-base ">Everywhere</p>
                 </div>
                 <div className="flex items-center gap-1  md:gap-2 text-[#008753]">
                   <Image src={Available} alt="available" width={12}></Image>
-                  <p className="text-[8px] md:text-base ">Available</p>
+                  <p className="text-[9px] md:text-base ">Available</p>
                 </div>
               </div>
             </div>
@@ -276,7 +271,7 @@ const App = () => {
           projects
         </p>
         <p className="text-[#B0B0B0] px-5 md:px-40 text-lg text-center font-medium mb-8">
-          Top Five(5) Selected Projects.
+          Top Six(6) Selected Projects.
         </p>
         <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-5">
           <div className="relative col-span-2 w-full">
@@ -338,6 +333,17 @@ const App = () => {
               </Link>
             </div>
           </div>
+          <div className="relative col-span-2 w-full">
+            <Image src={Kenntechs} alt="kenntechs" className="w-full"></Image>
+            <div className="absolute inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <Link
+                href={"https://kenntechs.vercel.app/"}
+                className="text-white text-xl font-medium underline"
+              >
+                Visit Project
+              </Link>
+            </div>
+          </div>
         </div>
         <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-40 py-10">
           <p className="text-white px-5 md:px-32 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
@@ -378,7 +384,11 @@ const App = () => {
           />
         </div>
       </div>
-      <Image src={Tools} alt="tools" width={600} className="mx-auto"></Image>
+      <Image
+        src={Tools}
+        alt="tools"
+        className="mx-auto w-full md:w-[600px]"
+      ></Image>
       <p className="text-white px-5 md:px-32 uppercase text-center font-bold text-2xl mb-1">
         Contact
       </p>
