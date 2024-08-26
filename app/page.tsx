@@ -32,6 +32,7 @@ import Mail from "../assets/mail.png";
 import Linkedin from "../assets/Linkdin.png";
 import { useState } from "react";
 import Kenntechs from "../assets/kenntechs.png";
+import Typescript from "../assets/Typescript.png";
 
 const App = () => {
   const bgImage = {
@@ -79,7 +80,7 @@ const App = () => {
             </p>
             <Link
               href={
-                "https://drive.google.com/file/d/1CyY-4dBU7Dsmo3X3TsnzwmgjA_aa-glX/view?usp=sharing"
+                "https://drive.google.com/file/d/1DDgkLrRvdFnqIxXLy6RqHf480_dRHfZJ/view?usp=sharing"
               }
             >
               <p className="px-4 font-medium hover:text-[17px]">Resume</p>
@@ -370,6 +371,16 @@ const App = () => {
             title={"React.js"}
             framworkImage={ReactIcon}
           />
+
+          <div className="col-span-1 md:col-span-2 md:w-1/2 mx-auto">
+            <Framework
+              body={
+                "Using TypeScript with Next.js improves type safety, development efficiency, and scalability."
+              }
+              title={"TypeScript"}
+              framworkImage={Typescript}
+            />
+          </div>
 
           <Framework
             body={"UI components styled with Tailwind CSS."}
