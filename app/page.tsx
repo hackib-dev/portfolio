@@ -140,7 +140,7 @@ const App = () => {
 
               <Link
                 href={
-                  "https://drive.google.com/file/d/1CyY-4dBU7Dsmo3X3TsnzwmgjA_aa-glX/view?usp=sharing"
+                  "https://drive.google.com/file/d/1DDgkLrRvdFnqIxXLy6RqHf480_dRHfZJ/view?usp=sharing"
                 }
               >
                 <p className="">Resume</p>
