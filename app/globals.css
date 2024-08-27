@@ -71,3 +71,8 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}

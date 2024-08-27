@@ -57,8 +57,8 @@ const App = () => {
       className="relative h-screen  bg-[url('../assets/aqib.jpg')]"
       style={bgImage}
     >
-      <div className="mb-28">
-        <div className="bg-white mx-auto px-2 absolute top-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-[99px] md:flex justify-between items-center py-1 hidden ">
+      <div className="py-1 md:py-5 mb-20">
+        <div className="bg-white mx-auto md:w-4/5 xl:w-1/2 px-2  rounded-[99px] md:flex justify-between items-center py-1 hidden mb-20">
           <div className="flex">
             <Link href={"/"}>
               <Image src={Logo} alt="logo" className="w-10"></Image>
@@ -111,10 +111,14 @@ const App = () => {
         </div>
 
         {isOpenMenu && (
-          <div className="flex flex-col absolute w-screen right-0 -top-3 md:hidden py-10 bg-white px-6 z-50 border-8 border-white h-screen text-center">
+          <div
+            className={`flex flex-col absolute w-screen right-0 -top-3 md:hidden py-10 bg-[#232230] text-white px-6 z-50 h-screen text-center transition-all duration-1000 ease-in-out ${
+              isOpenMenu ? "translate-y-0" : "translate-y-full"
+            }`}
+          >
             <div className="flex justify-between items-center">
               <Link href={`/`}>
-                <Image src={Logo} alt="logo" width={40} loading="lazy"></Image>
+                <Image src={Logo} alt="logo" width={40} loading="lazy" />
               </Link>
               <X className="w-6 h-6" onClick={toggleMenu} />
             </div>
@@ -143,7 +147,7 @@ const App = () => {
                   "https://drive.google.com/file/d/1DDgkLrRvdFnqIxXLy6RqHf480_dRHfZJ/view?usp=sharing"
                 }
               >
-                <p className="">Resume</p>
+                <p>Resume</p>
               </Link>
 
               <div
@@ -158,22 +162,22 @@ const App = () => {
           </div>
         )}
 
-        <div className="text-white text-6xl xl:text-[72px] absolute top-[270px] left-1/2 transform -translate-x-1/2 -translate-y-1/2  uppercase mt-3 font-medium leading-none text-center">
+        <div className="text-white text-6xl  xl:text-[83px] absolute top-[250px] left-1/2 transform -translate-x-1/2 -translate-y-1/2  uppercase font-medium leading-none text-center mt-0 md:mt-5 xl:mt-[100px]">
           <p>Frontend</p>
           <p>Developer</p>
           <p>Since</p>
           <p className="text-[#FF512F]">2021</p>
         </div>
 
-        <div className="px-52">
-          <Image src={AboutLine} alt="line" className="hidden xl:flex pt-32" />
+        <div className="px-[200px]">
+          <Image src={AboutLine} alt="line" className="hidden xl:flex pt-8" />
         </div>
       </div>
       <div
-        className="flex flex-col items-center justify-center min-h-screen px-5 md:px-44 mx-auto text-center gap-y-2 md:gap-y-10"
+        className="flex flex-col items-center justify-center  px-5 md:px-10 xl:px-44 mx-auto text-center gap-y-2 md:gap-y-10"
         id="about"
       >
-        <div className="flex bg-[#232230] rounded-xl items-center justify-between mx-0 md:mx-20 mt-60 md:mt-0 ">
+        <div className="flex bg-[#232230] rounded-xl items-center justify-between mx-0 md:mx-5 xl:mx-20 mt-72 md:mt-52 xl:mt-10 md:p-5">
           <div className="flex gap-x-3 md:gap-x-5 px-3 md:px-10 items-center">
             <div>
               <Image
@@ -182,12 +186,12 @@ const App = () => {
                 className="w-8 md:w-16"
               ></Image>
             </div>
-            <div className="flex flex-col md:justify-evenly py-3 md:py-0">
+            <div className="flex flex-col md:justify-evenly py-3 md:py-">
               <div className="flex items-center gap-2 text-white text-sm md:text-lg font-medium">
                 <p>Aqib Akinyele K.</p>
                 <Image src={Nigeria} alt="Nigeria"></Image>
               </div>
-              <div className="flex gap-x-2 justify-center md:gap-x-5">
+              <div className="flex gap-x-2 justify-center md:gap-x-3 xl:gap-x-5">
                 <div className="flex  items-center gap-1 md:gap-2 text-white">
                   <Image src={Engineer} alt="engineer"></Image>
                   <p className="text-[9px] md:text-base ">Frontend Developer</p>
@@ -204,12 +208,12 @@ const App = () => {
             </div>
           </div>
 
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <Image src={Map} alt="travel" className="float-right"></Image>
           </div>
         </div>
         <div>
-          <p className="text-[#B0B0B0] px-1 md:px-40 mt-5 md:mt-0">
+          <p className="text-[#B0B0B0] px-1 md:px-20 xl:px-40 md:text-xl mt-5 md:mt-0">
             Frontend Developer with several years of experience. Multiple
             certifications. Passionate about sports and naturally curious.
             Currently, I am focused on becoming a great leader and continuing to
@@ -221,7 +225,7 @@ const App = () => {
         </div>
 
         <div className="mt-10 items-center flex flex-col justify-center mx-auto">
-          <p className="text-white px-5 md:px-40 uppercase text-center font-bold text-xl mb-8">
+          <p className="text-white px-5 md:px-40 uppercase text-center font-bold text-2xl md:text-4xl mb-8">
             certifications
           </p>
           <div className="hidden md:flex justify-between items-center gap-x-16 justify-items-center text-center content-center">
@@ -265,89 +269,104 @@ const App = () => {
         </div>
       </div>
       <div
-        className="mt-0 md:mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-40 py-10"
+        className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10"
         id="projects"
       >
-        <p className="text-white px-28 uppercase text-center font-bold text-4xl mb-1">
+        <p className="text-white px-28 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
           projects
         </p>
         <p className="text-[#B0B0B0] px-5 md:px-40 text-lg text-center font-medium mb-8">
           Top Six(6) Selected Projects.
         </p>
-        <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-5">
+        <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-y-10">
           <div className="relative col-span-2 w-full">
             <Image src={Mte} alt="mte" className="w-full"></Image>
-            <div className="absolute inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+            <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <Link
                 href={"https://mte-psi.vercel.app"}
-                className="text-white text-xl font-medium underline"
+                className="text-white text-xl font-medium"
               >
-                Visit Project
+                <Button
+                  size={"lg"}
+                  className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                >
+                  Visit Project
+                </Button>
               </Link>
             </div>
           </div>
 
           <div className="relative">
             <Image src={Bitooqoh} alt="bitooqoh" className="w-full"></Image>
-            <div className="absolute inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <Link
                 href={"https://bitooqoh.com"}
                 className="text-white text-xl font-medium underline"
               >
-                Visit Project
+                <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                  Visit Project
+                </Button>
               </Link>
             </div>
           </div>
-
           <div className="relative">
             <Image src={Acemyx} alt="acemyx" className="w-full"></Image>
-            <div className="absolute inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <Link
                 href={"https://acemyx.com"}
                 className="text-white text-xl font-medium underline"
               >
-                Visit Project
+                <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                  Visit Project
+                </Button>
               </Link>
             </div>
           </div>
-
           <div className="relative">
             <Image src={Mss} alt="mss" className="w-full"></Image>
-            <div className="absolute inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <Link
                 href={"https://mssn.vercel.app"}
                 className="text-white text-xl font-medium underline"
               >
-                Visit Project
+                <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                  Visit Project
+                </Button>
               </Link>
             </div>
           </div>
-
           <div className="relative">
             <Image src={Payv} alt="payvantage" className="w-full"></Image>
-            <div className="absolute inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <Link
                 href={"https://www.payvantage.com.ng"}
                 className="text-white text-xl font-medium underline"
               >
-                Visit Project
+                <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                  Visit Project
+                </Button>
               </Link>
             </div>
           </div>
           <div className="relative col-span-2 w-full">
             <Image src={Kenntechs} alt="kenntechs" className="w-full"></Image>
-            <div className="absolute inset-0 bg-gray-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <Link
                 href={"https://kenntechs.vercel.app/"}
                 className="text-white text-xl font-medium underline"
               >
-                Visit Project
+                <Button
+                  size={"lg"}
+                  className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white"
+                >
+                  Visit Project
+                </Button>
               </Link>
             </div>
           </div>
         </div>
-        <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-40 py-10">
-          <p className="text-white px-5 md:px-32 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
+        <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10">
+          <p className="text-white px-5 md:px-5 xl:px-32 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
             Frameworks & Tech
           </p>
           <p className="text-[#B0B0B0] px-2 text-center font-medium mb-2">
@@ -400,10 +419,13 @@ const App = () => {
         alt="tools"
         className="mx-auto w-full md:w-[600px]"
       ></Image>
-      <p className="text-white px-5 md:px-32 uppercase text-center font-bold text-2xl mb-1">
+      <p className="text-white px-5 md:px-32 uppercase text-center font-medium text-xl mb-5">
         Contact
       </p>
-      <div className="flex gap-3 mt-3 md:mt-0 items-center justify-center pb-10 text-white">
+      <div
+        className="px-5 flex gap-10 mt-3 md:mt-0 items-center justify-center pb-10 text-[#B0B0B0]"
+        id="contact"
+      >
         <Link
           href={"mailto:aqibkenn@gmail.com"}
           className="flex gap-2 items-center"
@@ -428,7 +450,7 @@ const App = () => {
           href={"https://api.whatsapp.com/send/?phone=2348118888108"}
           className="flex gap-2 items-center"
         >
-          <Phone className="w-5 h-5" />
+          <Phone className="w-5 h-5" color="white" />
           <p>Whatsapp</p>
         </Link>
       </div>
