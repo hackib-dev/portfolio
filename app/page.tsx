@@ -194,15 +194,15 @@ const App = () => {
               <div className="flex gap-x-2 justify-center md:gap-x-3 xl:gap-x-5">
                 <div className="flex  items-center gap-1 md:gap-2 text-white">
                   <Image src={Engineer} alt="engineer"></Image>
-                  <p className="text-[9px] md:text-base ">Frontend Developer</p>
+                  <p className="text-[9px] md:text-sm ">Frontend Developer</p>
                 </div>
                 <div className="flex items-center gap-1 md:gap-2 text-white">
                   <Image src={Location} alt="location"></Image>
-                  <p className="text-[9px] md:text-base ">Everywhere</p>
+                  <p className="text-[9px] md:text-sm ">Everywhere</p>
                 </div>
                 <div className="flex items-center gap-1  md:gap-2 text-[#008753]">
                   <Image src={Available} alt="available" width={12}></Image>
-                  <p className="text-[9px] md:text-base ">Available</p>
+                  <p className="text-[9px] md:text-sm ">Available</p>
                 </div>
               </div>
             </div>

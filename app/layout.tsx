@@ -1,5 +1,6 @@
 import { Barlow } from "next/font/google";
 import "./globals.css";
+import anime from "animejs/lib/anime.es.js";
 
 export const metadata = {
   title: "Aqib Akinyele",
@@ -13,6 +14,7 @@ const barlow = Barlow({
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
+
 
 export default function RootLayout({
   children,
