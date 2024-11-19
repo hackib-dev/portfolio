@@ -64,6 +64,9 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      borderColor: {
+        "custom-purple": "#77768C",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

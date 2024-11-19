@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import AboutLine from "../assets/aboutLine.png";
-import Logo from "../assets/logoAqib.png";
 import { Button } from "@/components/ui/button";
 import Profile from "../assets/profile.png";
 import Nigeria from "../assets/nigeria.png";
@@ -17,167 +15,38 @@ import Coursera from "../assets/coursera.png";
 import Jobberman from "../assets/Jobberman.png";
 import Mte from "../assets/mte.png";
 import Bitooqoh from "../assets/bitooqoh.png";
-import Mss from "../assets/mss.png";
-import Acemyx from "../assets/acemyx.png";
+import Cloudvantage from "../assets/cloudvantage/baseImage.png";
+import InstaShop from "../assets/instashop/imageOne.png";
+import Kamyk from "../assets/kamyk.png";
 import Payv from "../assets/pvg.png";
 import Link from "next/link";
 import Framework from "@/components/FrameworkCard/page";
 import NextJs from "../assets/next.png";
 import ReactIcon from "../assets/React-icon.png";
+import CrmDashboard from "../assets/crmdasboard.png";
 import Shadcn from "../assets/shadcn.png";
 import Sql from "../assets/sql.png";
 import Tools from "../assets/tools.png";
-import { MenuIcon, Phone, X } from "lucide-react";
+import { Phone } from "lucide-react";
 import Mail from "../assets/mail.png";
 import Linkedin from "../assets/Linkdin.png";
-import { useState } from "react";
 import Kenntechs from "../assets/kenntechs.png";
 import Typescript from "../assets/Typescript.png";
+import Header from "@/components/Header/page";
+import HeroSection from "@/components/HeroSection/page";
+import { useRouter } from "next/navigation";
 
 const App = () => {
-  const bgImage = {
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "100% 100%",
-    backgroundPosition: "cover",
-  };
-  const [isOpenMenu, setIsOpenMenu] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpenMenu(!isOpenMenu);
-  };
-
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const router = useRouter();
   return (
-    <div
-      className="relative h-screen  bg-[url('../assets/aqib.jpg')]"
-      style={bgImage}
-    >
-      <div className="py-1 md:py-5 mb-20">
-        <div className="bg-white mx-auto md:w-4/5 xl:w-1/2 px-2  rounded-[99px] md:flex justify-between items-center py-1 hidden mb-20">
-          <div className="flex">
-            <Link href={"/"}>
-              <Image src={Logo} alt="logo" className="w-10"></Image>
-            </Link>
-          </div>
-
-          <div className="flex  px-10 ">
-            <p
-              className="font-medium hover:text-[17px] cursor-pointer"
-              onClick={() => scrollToSection("about")}
-            >
-              About
-            </p>
-            <p
-              className="pl-4 font-medium hover:text-[17px] cursor-pointer"
-              onClick={() => scrollToSection("projects")}
-            >
-              Projects
-            </p>
-            <Link
-              href={
-                "https://drive.google.com/file/d/1DDgkLrRvdFnqIxXLy6RqHf480_dRHfZJ/view?usp=sharing"
-              }
-            >
-              <p className="px-4 font-medium hover:text-[17px]">Resume</p>
-            </Link>
-            <p
-              className="pl-4 font-medium hover:text-[17px] cursor-pointer"
-              onClick={() => scrollToSection("contact")}
-            >
-              Contact
-            </p>
-          </div>
-          <div className="my-1">
-            <Link href={"https://www.linkedin.com/in/aqib-akinyele"}>
-              <Button className="bg-[#373646] text-white rounded-[25px] text-sm font-bold">
-                Linkedin
-              </Button>
-            </Link>
-          </div>
-        </div>
-
-        <div className="flex md:hidden p-4 items-center justify-between">
-          <Link href={"/"}>
-            <Image src={Logo} alt="logo" className="w-10"></Image>
-          </Link>
-          <div className="flex md:hidden text-white">
-            <MenuIcon onClick={toggleMenu} aria-label="Toggle menu" />
-          </div>
-        </div>
-
-        {isOpenMenu && (
-          <div
-            className={`flex flex-col absolute w-screen right-0 -top-3 md:hidden py-10 bg-[#232230] text-white px-6 z-50 h-screen text-center transition-all duration-1000 ease-in-out ${
-              isOpenMenu ? "translate-y-0" : "translate-y-full"
-            }`}
-          >
-            <div className="flex justify-between items-center">
-              <Link href={`/`}>
-                <Image src={Logo} alt="logo" width={40} loading="lazy" />
-              </Link>
-              <X className="w-6 h-6" onClick={toggleMenu} />
-            </div>
-
-            <div className="flex flex-col gap-10 mt-32 text-xl font-medium">
-              <div
-                onClick={() => {
-                  toggleMenu();
-                  scrollToSection("about");
-                }}
-              >
-                <p>About</p>
-              </div>
-
-              <div
-                onClick={() => {
-                  toggleMenu();
-                  scrollToSection("projects");
-                }}
-              >
-                <p>Projects</p>
-              </div>
-
-              <Link
-                href={
-                  "https://drive.google.com/file/d/1DDgkLrRvdFnqIxXLy6RqHf480_dRHfZJ/view?usp=sharing"
-                }
-              >
-                <p>Resume</p>
-              </Link>
-
-              <div
-                onClick={() => {
-                  toggleMenu();
-                  scrollToSection("contact");
-                }}
-              >
-                <p>Contact</p>
-              </div>
-            </div>
-          </div>
-        )}
-
-        <div className="text-white text-6xl  xl:text-[83px] absolute top-[250px] left-1/2 transform -translate-x-1/2 -translate-y-1/2  uppercase font-medium leading-none text-center mt-0 md:mt-5 xl:mt-[100px]">
-          <p>Frontend</p>
-          <p>Developer</p>
-          <p>Since</p>
-          <p className="text-[#FF512F]">2021</p>
-        </div>
-
-        <div className="px-[200px]">
-          <Image src={AboutLine} alt="line" className="hidden xl:flex pt-8" />
-        </div>
-      </div>
+    <div className="relative">
+      <Header backgroundImage />
+      <HeroSection />
       <div
         className="flex flex-col items-center justify-center  px-5 md:px-10 xl:px-44 mx-auto text-center gap-y-2 md:gap-y-10"
         id="about"
       >
-        <div className="flex bg-[#232230] rounded-xl items-center justify-between mx-0 md:mx-5 xl:mx-20 mt-72 md:mt-52 xl:mt-10 md:p-5">
+        <div className="flex bg-[#232230] rounded-xl items-center justify-between mx-0 md:mx-5 xl:mx-20 mt-10 md:mt-10 xl:mt-10 md:p-5">
           <div className="flex gap-x-3 md:gap-x-5 px-3 md:px-10 items-center">
             <div>
               <Image
@@ -280,88 +149,204 @@ const App = () => {
         </p>
         <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-y-10">
           <div className="relative col-span-2 w-full">
-            <Image src={Mte} alt="mte" className="w-full"></Image>
+            <Image src={Bitooqoh} alt="bitooqoh" className="w-full"></Image>
+
             <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <Link
-                href={"https://mte-psi.vercel.app"}
-                className="text-white text-xl font-medium"
-              >
-                <Button
-                  size={"lg"}
-                  className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+              <div className="flex gap-3">
+                <Link
+                  href={"/bitooqoh"}
+                  className="text-white text-xl font-medium"
                 >
-                  Visit Project
-                </Button>
-              </Link>
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View More
+                  </Button>
+                </Link>
+                <Link
+                  href={"https://bitooqoh.com"}
+                  className="text-white text-xl font-medium underline"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
 
-          <div className="relative">
-            <Image src={Bitooqoh} alt="bitooqoh" className="w-full"></Image>
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image src={Mte} alt="mte" className="w-full"></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <Link
-                href={"https://bitooqoh.com"}
-                className="text-white text-xl font-medium underline"
-              >
-                <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                  Visit Project
-                </Button>
-              </Link>
+              <div className="flex gap-3">
+                <Link href={"/mte"} className="text-white text-xl font-medium">
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View More
+                  </Button>
+                </Link>
+                <Link
+                  href={"https://mte-psi.vercel.app"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8 "
+                  >
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="relative">
-            <Image src={Acemyx} alt="acemyx" className="w-full"></Image>
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image
+              src={Cloudvantage}
+              alt="cloudvantage"
+              className="w-full"
+            ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <Link
-                href={"https://acemyx.com"}
-                className="text-white text-xl font-medium underline"
-              >
-                <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                  Visit Project
-                </Button>
-              </Link>
+              <div className="flex gap-3">
+                <Link
+                  href={"/cloudvantage"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View More
+                  </Button>
+                </Link>
+
+                <Link
+                  href={"https://cloud-vantage.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="relative">
-            <Image src={Mss} alt="mss" className="w-full"></Image>
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image
+              src={CrmDashboard}
+              alt="crm-dashboard"
+              className="w-full"
+            ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <Link
-                href={"https://mssn.vercel.app"}
-                className="text-white text-xl font-medium underline"
-              >
-                <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                  Visit Project
-                </Button>
-              </Link>
+              <div className="flex gap-3">
+                <Link
+                  href={"/crm-dashboard"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View More
+                  </Button>
+                </Link>
+
+                <Link
+                  href={"https://crm-dashboard-gray.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image src={InstaShop} alt="instashop" className="w-full"></Image>
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link
+                  href={"/instashop"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View More
+                  </Button>
+                </Link>
+
+                <Link
+                  href={"https://instashop-test.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image src={Kamyk} alt="kamyk" className="w-full"></Image>
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link
+                  href={"/kamyk"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View More
+                  </Button>
+                </Link>
+
+                <Link
+                  href={"https://kamyk.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative col-span-2 lg:col-span-1 w-full">
             <Image src={Payv} alt="payvantage" className="w-full"></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <Link
-                href={"https://www.payvantage.com.ng"}
-                className="text-white text-xl font-medium underline"
-              >
-                <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                  Visit Project
-                </Button>
-              </Link>
+              <div className="flex gap-3">
+                <Link
+                  href={"https://www.payvantage.com.ng"}
+                  className="text-white text-xl font-medium underline"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="relative col-span-2 w-full">
             <Image src={Kenntechs} alt="kenntechs" className="w-full"></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <Link
-                href={"https://kenntechs.vercel.app/"}
-                className="text-white text-xl font-medium underline"
-              >
-                <Button
-                  size={"lg"}
-                  className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white"
+              <div className="flex gap-3">
+                <Link
+                  href={"https://kenntechs.vercel.app/"}
+                  className="text-white text-xl font-medium underline"
                 >
-                  Visit Project
-                </Button>
-              </Link>
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white  h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
