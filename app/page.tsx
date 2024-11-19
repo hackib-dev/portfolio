@@ -161,7 +161,7 @@ const App = () => {
                     size={"lg"}
                     className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
                   >
-                    View More
+                    View Details
                   </Button>
                 </Link>
                 <Link
@@ -185,7 +185,7 @@ const App = () => {
                     size={"lg"}
                     className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
                   >
-                    View More
+                    View Details
                   </Button>
                 </Link>
                 <Link
@@ -218,7 +218,7 @@ const App = () => {
                     size={"lg"}
                     className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
                   >
-                    View More
+                    View Details
                   </Button>
                 </Link>
 
@@ -249,7 +249,7 @@ const App = () => {
                     size={"lg"}
                     className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
                   >
-                    View More
+                    View Details
                   </Button>
                 </Link>
 
@@ -276,7 +276,7 @@ const App = () => {
                     size={"lg"}
                     className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
                   >
-                    View More
+                    View Details
                   </Button>
                 </Link>
 
@@ -303,7 +303,7 @@ const App = () => {
                     size={"lg"}
                     className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
                   >
-                    View More
+                    View Details
                   </Button>
                 </Link>
 
@@ -355,7 +355,7 @@ const App = () => {
             Frameworks & Tech
           </p>
           <p className="text-[#B0B0B0] px-2 text-center font-medium mb-2">
-            These are the tools and frameworks with which I feel more
+            These are the tools and frameworks with which I feel Details
             comfortable without limiting myself to them because I have worked
             with Python, Mysql, CodeIgniter and others...
           </p>
