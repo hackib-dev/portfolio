@@ -206,7 +206,7 @@ const App = () => {
             <Image
               src={Cloudvantage}
               alt="cloudvantage"
-              className="w-full"
+              className="w-full rounded-xl"
             ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
@@ -237,7 +237,7 @@ const App = () => {
             <Image
               src={CrmDashboard}
               alt="crm-dashboard"
-              className="w-full"
+              className="w-full rounded-xl"
             ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
@@ -265,7 +265,11 @@ const App = () => {
             </div>
           </div>
           <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image src={InstaShop} alt="instashop" className="w-full"></Image>
+            <Image
+              src={InstaShop}
+              alt="instashop"
+              className="w-full rounded-xl"
+            ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link
@@ -292,7 +296,11 @@ const App = () => {
             </div>
           </div>
           <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image src={Kamyk} alt="kamyk" className="w-full"></Image>
+            <Image
+              src={Kamyk}
+              alt="kamyk"
+              className="w-full rounded-xl"
+            ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link

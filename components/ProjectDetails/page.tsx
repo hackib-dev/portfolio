@@ -26,7 +26,7 @@ const DetailRow: React.FC<{ label: string; content: React.ReactNode }> = ({
   </div>
 );
 
-const ProjectDetails: React.FC<ProjectDetailsProps> = ({
+const ProjectDetails = ({
   companyName,
   about,
   technologies,
@@ -34,7 +34,7 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({
   galleryImages,
   projectLink,
   mainImage,
-}) => {
+}: ProjectDetailsProps) => {
   return (
     <div className="mb-10">
       <Header backgroundImage={false} />
