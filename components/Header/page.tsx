@@ -7,6 +7,7 @@ import Link from "next/link";
 import { MenuIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { BackgroundLines } from "../BackgroundLines/page";
 
 interface HeaderProps {
   backgroundImage: boolean;
@@ -87,8 +88,9 @@ const Header = ({ backgroundImage }: HeaderProps) => {
             </p>
             <Link
               href={
-                "https://drive.google.com/file/d/1DDgkLrRvdFnqIxXLy6RqHf480_dRHfZJ/view?usp=sharing"
+                "https://drive.google.com/file/d/1cYnEa6NmoANbeOc8Tx4al8AK2rD5UV-T/view?usp=sharing"
               }
+              target="_blank"
             >
               <p className="px-4 font-medium hover:text-[17px]">Resume</p>
             </Link>
@@ -151,8 +153,9 @@ const Header = ({ backgroundImage }: HeaderProps) => {
 
               <Link
                 href={
-                  "https://drive.google.com/file/d/1DDgkLrRvdFnqIxXLy6RqHf480_dRHfZJ/view?usp=sharing"
+                  "https://drive.google.com/file/d/1cYnEa6NmoANbeOc8Tx4al8AK2rD5UV-T/view?usp=sharing"
                 }
+                target="_blank"
               >
                 <p>Resume</p>
               </Link>

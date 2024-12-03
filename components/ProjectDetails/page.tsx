@@ -40,7 +40,7 @@ const ProjectDetails = ({
       <Header backgroundImage={false} />
       <div className="flex gap-3 items-center justify-center w-full px-auto">
         <div className="h-2 w-2 xl:h-5 xl:w-5 bg-white rounded-full"></div>
-        <Link href={projectLink}>
+        <Link href={projectLink} target="_blank">
           <p className="text-lg md:text-3xl font-semibold text-white">
             {companyName}
           </p>
@@ -51,7 +51,7 @@ const ProjectDetails = ({
         <Image src={mainImage.src} alt={mainImage.alt} className="w-full" />
         <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
           <div className="flex gap-3">
-            <Link href={projectLink}>
+            <Link href={projectLink} target="_blank">
               <Button
                 size="lg"
                 className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"

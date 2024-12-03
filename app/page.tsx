@@ -145,7 +145,7 @@ const App = () => {
           projects
         </p>
         <p className="text-[#B0B0B0] px-5 md:px-40 text-lg text-center font-medium mb-8">
-          Top Six(6) Selected Projects.
+          Top Eight(8) Selected Projects.
         </p>
         <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-y-10">
           <div className="relative col-span-2 w-full">
@@ -167,6 +167,7 @@ const App = () => {
                 <Link
                   href={"https://bitooqoh.com"}
                   className="text-white text-xl font-medium underline"
+                  target="_blank"
                 >
                   <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
                     Visit Project
@@ -191,6 +192,7 @@ const App = () => {
                 <Link
                   href={"https://mte-psi.vercel.app"}
                   className="text-white text-xl font-medium"
+                  target="_blank"
                 >
                   <Button
                     size={"lg"}
@@ -225,6 +227,7 @@ const App = () => {
                 <Link
                   href={"https://cloud-vantage.vercel.app"}
                   className="text-white text-xl font-medium underline"
+                  target="_blank"
                 >
                   <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
                     Visit Project
@@ -256,6 +259,7 @@ const App = () => {
                 <Link
                   href={"https://crm-dashboard-gray.vercel.app"}
                   className="text-white text-xl font-medium underline"
+                  target="_blank"
                 >
                   <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
                     Visit Project
@@ -287,6 +291,7 @@ const App = () => {
                 <Link
                   href={"https://instashop-test.vercel.app"}
                   className="text-white text-xl font-medium underline"
+                  target="_blank"
                 >
                   <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
                     Visit Project
@@ -318,6 +323,7 @@ const App = () => {
                 <Link
                   href={"https://kamyk.vercel.app"}
                   className="text-white text-xl font-medium underline"
+                  target="_blank"
                 >
                   <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
                     Visit Project
@@ -334,6 +340,7 @@ const App = () => {
                 <Link
                   href={"https://www.payvantage.com.ng"}
                   className="text-white text-xl font-medium underline"
+                  target="_blank"
                 >
                   <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
                     Visit Project
@@ -349,6 +356,7 @@ const App = () => {
                 <Link
                   href={"https://kenntechs.vercel.app/"}
                   className="text-white text-xl font-medium underline"
+                  target="_blank"
                 >
                   <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white  h-9 px-3 md:h-11 md:px-8">
                     Visit Project
