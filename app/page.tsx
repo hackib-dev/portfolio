@@ -35,6 +35,7 @@ import Typescript from "../assets/Typescript.png";
 import Header from "@/components/Header/page";
 import HeroSection from "@/components/HeroSection/page";
 import { useRouter } from "next/navigation";
+import Flutter from "../assets/flutter.svg";
 
 const App = () => {
   const router = useRouter();
@@ -387,20 +388,24 @@ const App = () => {
           />
 
           <Framework
-            body={"Server and Client Components. Use hook."}
+            body={"Server and Client Components."}
             title={"React.js"}
             framworkImage={ReactIcon}
           />
 
-          <div className="col-span-1 md:col-span-2 md:w-1/2 mx-auto">
-            <Framework
-              body={
-                "Using TypeScript with Next.js improves type safety, development efficiency, and scalability."
-              }
-              title={"TypeScript"}
-              framworkImage={Typescript}
-            />
-          </div>
+          <Framework
+            body={"Building Mobile Apps. Android and IOS"}
+            title={"Flutter"}
+            framworkImage={Flutter}
+          />
+
+          <Framework
+            body={
+              "Using TypeScript with Next.js improves type safety, development efficiency, and scalability."
+            }
+            title={"TypeScript"}
+            framworkImage={Typescript}
+          />
 
           <Framework
             body={"UI components styled with Tailwind CSS."}
