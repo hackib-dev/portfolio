@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Header from "@/components/Header/page";
 import ZoomableImage from "@/components/ZoomableImage/page";
+import { useRef, useEffect } from "react";
 
 interface ProjectDetailsProps {
   companyName: string;
@@ -14,6 +15,7 @@ interface ProjectDetailsProps {
   galleryImages: { src: string | StaticImageData; alt: string }[];
   projectLink: string;
   mainImage: { src: string | StaticImageData; alt: string };
+  videoUrl?: string;
 }
 
 const DetailRow: React.FC<{ label: string; content: React.ReactNode }> = ({
@@ -34,7 +36,18 @@ const ProjectDetails = ({
   galleryImages,
   projectLink,
   mainImage,
+  videoUrl,
 }: ProjectDetailsProps) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log("Autoplay prevented:", error);
+      });
+    }
+  }, []);
+
   return (
     <div className="mb-10">
       <Header backgroundImage={false} />
@@ -66,6 +79,32 @@ const ProjectDetails = ({
         <DetailRow label="Company" content={companyName} />
         <DetailRow label="About" content={about} />
         <DetailRow label="Technologies" content={technologies} />
+
+        {/* Video Section - Only show if videoUrl exists */}
+        {videoUrl && (
+          <DetailRow
+            label="Animation Demo"
+            content={
+              <div className="w-full">
+                <video
+                  ref={videoRef}
+                  muted
+                  loop
+                  autoPlay
+                  playsInline
+                  className="w-full rounded-xl border-4 border-[#007AFF] shadow-lg"
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <p className="text-[#77768C] text-sm mt-2">
+                  Watch the smooth animations and interactions in action
+                </p>
+              </div>
+            }
+          />
+        )}
+
         <DetailRow
           label="My Contributions"
           content={

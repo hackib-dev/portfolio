@@ -19,6 +19,7 @@ import Cloudvantage from "../assets/cloudvantage/baseImage.png";
 import InstaShop from "../assets/instashop/imageOne.png";
 import Kamyk from "../assets/kamyk.png";
 import Payv from "../assets/pvg.png";
+import Super from "../assets/super.png";
 import Link from "next/link";
 import Framework from "@/components/FrameworkCard/page";
 import NextJs from "../assets/next.png";
@@ -36,6 +37,9 @@ import Header from "@/components/Header/page";
 import HeroSection from "@/components/HeroSection/page";
 import { useRouter } from "next/navigation";
 import Flutter from "../assets/flutter.svg";
+import Tax from "../assets/tax.png";
+import Feeble from "../assets/feeble/imageOne.png";
+import Nova from "../assets/nova/imageOne.png";
 
 const App = () => {
   const router = useRouter();
@@ -138,20 +142,51 @@ const App = () => {
           </div>
         </div>
       </div>
+
+      {/* PRODUCTION PROJECTS SECTION */}
       <div
         className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10"
         id="projects"
       >
         <p className="text-white px-28 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
-          projects
+          Production Projects
         </p>
         <p className="text-[#B0B0B0] px-5 md:px-40 text-lg text-center font-medium mb-8">
-          Top Eight(8) Selected Projects.
+          Real-world applications serving thousands of users
         </p>
         <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-y-10">
+          {/* FEATURED PROJECT - FIRS Tax Management */}
           <div className="relative col-span-2 w-full">
-            <Image src={Bitooqoh} alt="bitooqoh" className="w-full"></Image>
+            <Image
+              src={Tax}
+              alt="firs-tax-management-system"
+              className="w-full"
+            ></Image>
+            <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link href={"/tax"} className="text-white text-xl font-medium">
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View Details
+                  </Button>
+                </Link>
+                <Link
+                  href={"https://tax-manager-mu.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                  target="_blank"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Demo
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
 
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image src={Bitooqoh} alt="bitooqoh" className="w-full"></Image>
             <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link
@@ -171,6 +206,41 @@ const App = () => {
                   target="_blank"
                 >
                   <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image
+              src={Super}
+              alt="super-international-travels"
+              className="w-full rounded-xl"
+            ></Image>
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link
+                  href={"/super"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View Details
+                  </Button>
+                </Link>
+                <Link
+                  href={"https://superinttravels.com/"}
+                  className="text-white text-xl font-medium"
+                  target="_blank"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8 "
+                  >
                     Visit Project
                   </Button>
                 </Link>
@@ -205,6 +275,7 @@ const App = () => {
               </div>
             </div>
           </div>
+
           <div className="relative col-span-2 lg:col-span-1 w-full">
             <Image
               src={Cloudvantage}
@@ -237,70 +308,7 @@ const App = () => {
               </div>
             </div>
           </div>
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={CrmDashboard}
-              alt="crm-dashboard"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/crm-dashboard"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
 
-                <Link
-                  href={"https://crm-dashboard-gray.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={InstaShop}
-              alt="instashop"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/instashop"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-
-                <Link
-                  href={"https://instashop-test.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
           <div className="relative col-span-2 lg:col-span-1 w-full">
             <Image
               src={Kamyk}
@@ -350,6 +358,7 @@ const App = () => {
               </div>
             </div>
           </div>
+
           <div className="relative col-span-2 w-full">
             <Image src={Kenntechs} alt="kenntechs" className="w-full"></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
@@ -367,14 +376,159 @@ const App = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* TECHNICAL ASSESSMENTS SECTION */}
+      <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10">
+        <p className="text-white px-28 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
+          Technical Assessments
+        </p>
+        <p className="text-[#B0B0B0] px-5 md:px-40 text-lg text-center font-medium mb-8">
+          Code challenges showcasing technical expertise
+        </p>
+        <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-y-10">
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image
+              src={Feeble}
+              alt="feeble-assessment"
+              className="w-full rounded-xl"
+            ></Image>
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link
+                  href={"/feeble"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View Details
+                  </Button>
+                </Link>
+
+                <Link
+                  href={"https://feeble-assessment.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                  target="_blank"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image
+              src={Nova}
+              alt="novacrust-assessment"
+              className="w-full rounded-xl"
+            ></Image>
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link
+                  href={"/novacrust"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View Details
+                  </Button>
+                </Link>
+
+                <Link
+                  href={"https://novacrust-assessment-lovat.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                  target="_blank"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image
+              src={CrmDashboard}
+              alt="crm-dashboard"
+              className="w-full rounded-xl"
+            ></Image>
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link
+                  href={"/crm-dashboard"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View Details
+                  </Button>
+                </Link>
+
+                <Link
+                  href={"https://crm-dashboard-gray.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                  target="_blank"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image
+              src={InstaShop}
+              alt="instashop"
+              className="w-full rounded-xl"
+            ></Image>
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link
+                  href={"/instashop"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View Details
+                  </Button>
+                </Link>
+
+                <Link
+                  href={"https://instashop-test.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                  target="_blank"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* FRAMEWORKS & TECH SECTION */}
         <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10">
           <p className="text-white px-5 md:px-5 xl:px-32 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
             Frameworks & Tech
           </p>
           <p className="text-[#B0B0B0] px-2 text-center font-medium mb-2">
-            These are the tools and frameworks with which I feel Details
-            comfortable without limiting myself to them because I have worked
-            with Python, Mysql, CodeIgniter and others...
+            These are the tools and frameworks with which I feel comfortable
+            without limiting myself to them because I have worked with Python,
+            MySQL, CodeIgniter and others...
           </p>
           <p className="text-[#B0B0B0] text-lg text-center font-medium mb-8">
             My main stack is:
