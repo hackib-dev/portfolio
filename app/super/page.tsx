@@ -5,7 +5,7 @@ import ImageOne from "../../assets/super/imageOne.png";
 import ImageTwo from "../../assets/super/imageTwo.png";
 import ImageThree from "../../assets/super/imageThree.png";
 import ImageFour from "../../assets/super/imageFour.png";
-import ImageFive from "../../assets/super/imageFive.png";
+import ImageFive from "../../assets/super/imageFIve.png";
 import ImageSix from "../../assets/super/imageSix.png";
 import ImageSeven from "../../assets/super/imageSeven.png";
 import ImageEight from "../../assets/super/imageEight.png";
