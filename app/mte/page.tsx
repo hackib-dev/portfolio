@@ -12,6 +12,10 @@ import ImageThree from "../../assets/mte/imageThree.png";
 import ImageFour from "../../assets/mte/imageFour.png";
 import ImageFive from "../../assets/mte/imageFive.png";
 import ImageSix from "../../assets/mte/imageSix.png";
+import ImageSeven from "../../assets/mte/imageSeven.png";
+import ImageEight from "../../assets/mte/imageEight.png";
+import ImageNine from "../../assets/mte/imageNine.png";
+import ImageTen from "../../assets/mte/imageTen.png";
 import ProjectDetails from "@/components/ProjectDetails/page";
 
 const MteDetails = () => {
@@ -33,6 +37,10 @@ const MteDetails = () => {
         { src: ImageFour, alt: "image-four" },
         { src: ImageFive, alt: "image-five" },
         { src: ImageSix, alt: "image-six" },
+        { src: ImageSeven, alt: "image-seven" },
+        { src: ImageEight, alt: "image-eight" },
+        { src: ImageNine, alt: "image-nine" },
+        { src: ImageTen, alt: "image-ten" },
       ]}
       projectLink="https://mte-psi.vercel.app"
       mainImage={{ src: Mte, alt: "mte" }}
