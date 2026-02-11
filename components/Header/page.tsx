@@ -88,7 +88,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
             </p>
             <Link
               href={
-                "https://drive.google.com/file/d/1hy75Lox5CF6anUQp3sZ7xnS3ihMc2l-m/view?usp=sharing"
+                "https://drive.google.com/file/d/1IeCZXl315PehdF8V6nxi4aTQKqkvfIPV/view?usp=sharing"
               }
               target="_blank"
             >
@@ -153,7 +153,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
 
               <Link
                 href={
-                  "https://drive.google.com/file/d/1hy75Lox5CF6anUQp3sZ7xnS3ihMc2l-m/view?usp=sharing"
+                  "https://drive.google.com/file/d/1IeCZXl315PehdF8V6nxi4aTQKqkvfIPV/view?usp=sharing"
                 }
                 target="_blank"
               >
