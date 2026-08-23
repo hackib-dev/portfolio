@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/bitooqoh",
     "/super",
     "/mte",
+    "/mte-kenya",
     "/cloudvantage",
     "/kamyk",
     "/crm-dashboard",

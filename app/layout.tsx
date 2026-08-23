@@ -65,6 +65,41 @@ const barlow = Barlow({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Aqib Akinyele",
+  alternateName: "Aqib Akinyele K.",
+  url: BASE_URL,
+  image: `${BASE_URL}/favicon.svg`,
+  jobTitle: "Frontend Developer",
+  description:
+    "Frontend Developer who's shipped production apps across fintech, real estate, travel, and live events, including the core banking platform powering Ethica's mobile app and a ticketing platform processing ₦190M+ in sales.",
+  knowsAbout: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Flutter",
+    "Frontend Development",
+    "Redux",
+    "Tailwind CSS",
+  ],
+  award: "ThinkVantage Award — Overall Winner, Ethica Microfinance Bank",
+  worksFor: {
+    "@type": "Organization",
+    name: "Payvantage",
+    url: "https://www.payvantage.com.ng",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/aqib-akinyele",
+    "https://github.com/hackib-dev",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "NG",
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -76,6 +111,10 @@ export default function RootLayout({
         <link
           href="https://fonts.cdnfonts.com/css/codec-pro"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
       </head>
 

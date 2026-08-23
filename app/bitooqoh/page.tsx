@@ -6,7 +6,7 @@ import ImageTwo from "../../assets/bitooqoh/imageTwo.png";
 import ImageThree from "../../assets/bitooqoh/imageThree.png";
 import ImageFour from "../../assets/bitooqoh/imageFour.png";
 import ImageFive from "../../assets/bitooqoh/imageFive.png";
-import ImageSix from "../../assets/bitooqoh/imageSix.jpeg";
+import ImageSix from "../../assets/bitooqoh/imageSix.png";
 import ProjectDetails from "@/components/ProjectDetails/page";
 
 const BitooqohDetails = () => {
@@ -15,6 +15,11 @@ const BitooqohDetails = () => {
       companyName="Bitooqoh"
       about="At bitooqoh, we’re passionate about transforming how you experience live events. Founded with a vision to simplify the ticketing process and enhance your event experiences, we’re committed to providing you with an unparalleled platform for discovering, booking, and managing tickets"
       technologies="TypeScript, Next.js, Shadcn"
+      metrics={[
+        { value: "₦190M+", label: "in ticket sales processed" },
+        { value: "2", label: "countries — Nigeria & Kenya" },
+        { value: "60+", label: "organizers requested early access" },
+      ]}
       contributions={[
         "I Ensured a consistent look and feel across the platform, adhering to the design guidelines and brand identity.",
         "I Integrated the frontend with backend APIs to handle ticket bookings, user authentication,payment processing, and other functionalities.",

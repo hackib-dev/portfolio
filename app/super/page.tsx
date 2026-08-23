@@ -17,6 +17,14 @@ const SuperDetails = () => {
       companyName="Super International Travels Limited"
       about="Your premium travel companion, offering exceptional flight deals, luxurious accommodations, and unforgettable vacation packages worldwide."
       technologies="TypeScript, Next.js, Shadcn"
+      metrics={[
+        {
+          value: "24+ years",
+          label: "of the company's experience powering the platform",
+        },
+        { value: "62+", label: "corporate clients served" },
+        { value: "31+", label: "countries covered" },
+      ]}
       contributions={[
         "I developed a seamless booking interface for flights, hotels, and vacation packages with real-time availability and pricing updates.",
         "I integrated third-party travel APIs to fetch and display flight schedules and package deals",
@@ -29,13 +37,13 @@ const SuperDetails = () => {
       ]}
       galleryImages={[
         { src: ImageOne, alt: "image-one" },
-        { src: ImageTwo, alt: "image-two" },
-        { src: ImageThree, alt: "image-three" },
-        { src: ImageFour, alt: "image-four" },
-        { src: ImageFive, alt: "image-five" },
         { src: ImageSix, alt: "image-six" },
-        { src: ImageSeven, alt: "image-seven" },
+        { src: ImageTwo, alt: "image-two" },
+        { src: ImageFour, alt: "image-four" },
         { src: ImageEight, alt: "image-eight" },
+        { src: ImageThree, alt: "image-three" },
+        { src: ImageFive, alt: "image-five" },
+        { src: ImageSeven, alt: "image-seven" },
       ]}
       projectLink="https://superinttravels.com/"
       mainImage={{ src: Super, alt: "super-international-travels" }}

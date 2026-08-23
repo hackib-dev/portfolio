@@ -14,10 +14,11 @@ import SideHustle from "../assets/SideHustle.png";
 import Coursera from "../assets/coursera.png";
 import Jobberman from "../assets/Jobberman.png";
 import Mte from "../assets/mte.png";
+import MteKenya from "../assets/mteKenya.png";
 import Bitooqoh from "../assets/bitooqoh.png";
 import Cloudvantage from "../assets/cloudvantage/baseImage.png";
 import InstaShop from "../assets/instashop/imageOne.png";
-import Kamyk from "../assets/kamyk.png";
+// import Kamyk from "../assets/kamyk.png";
 import Payv from "../assets/pvg.png";
 import Super from "../assets/super.png";
 import Link from "next/link";
@@ -28,7 +29,7 @@ import CrmDashboard from "../assets/crmdasboard.png";
 import Shadcn from "../assets/shadcn.png";
 import Sql from "../assets/sql.png";
 import Tools from "../assets/tools.png";
-import { Phone } from "lucide-react";
+import { Phone, Trophy } from "lucide-react";
 import Mail from "../assets/mail.png";
 import Linkedin from "../assets/Linkdin.png";
 import Kenntechs from "../assets/kenntechs.png";
@@ -68,11 +69,11 @@ const App = () => {
               <div className="flex gap-x-2 justify-center md:gap-x-3 xl:gap-x-5">
                 <div className="flex  items-center gap-1 md:gap-2 text-white">
                   <Image src={Engineer} alt="engineer"></Image>
-                  <p className="text-[9px] md:text-sm ">Frontend Developer</p>
+                  <p className="text-[9px] md:text-sm ">4+ yrs · Fintech &amp; Travel</p>
                 </div>
                 <div className="flex items-center gap-1 md:gap-2 text-white">
                   <Image src={Location} alt="location"></Image>
-                  <p className="text-[9px] md:text-sm ">Everywhere</p>
+                  <p className="text-[9px] md:text-sm ">Remote (Worldwide)</p>
                 </div>
                 <div className="flex items-center gap-1  md:gap-2 text-[#008753]">
                   <Image src={Available} alt="available" width={12}></Image>
@@ -88,13 +89,13 @@ const App = () => {
         </div>
         <div>
           <p className="text-[#B0B0B0] px-1 md:px-20 xl:px-40 md:text-xl mt-5 md:mt-0">
-            Frontend Developer with several years of experience. Multiple
-            certifications. Passionate about sports and naturally curious.
-            Currently, I am focused on becoming a great leader and continuing to
-            share. I feel optimistic about the impact my skills can have in the
-            real world and believe that I can create innovative solutions to
-            human pain-points which will ultimately lead to a better user
-            experience.
+            Frontend Developer who&apos;s shipped production apps across
+            fintech, real estate, travel, and live events, including the core
+            banking platform powering Ethica&apos;s mobile app and a ticketing
+            platform processing ₦190M+ in sales. Core stack: Next.js, React,
+            TypeScript. Recognized as Ethica Microfinance Bank&apos;s
+            ThinkVantage Award winner for driving operational innovation. Now
+            focused on growing into technical leadership.
           </p>
         </div>
 
@@ -143,6 +144,43 @@ const App = () => {
         </div>
       </div>
 
+      {/* AWARDS & RECOGNITION SECTION */}
+      <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40">
+        <p className="text-white px-5 md:px-40 uppercase text-center font-bold text-2xl md:text-4xl mb-8">
+          Awards & Recognition
+        </p>
+        <div className="w-full max-w-2xl bg-[#232230] rounded-xl p-6 md:p-8 flex gap-4 md:gap-6 items-start">
+          <div className="shrink-0 w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#008753] bg-opacity-20 flex items-center justify-center">
+            <Trophy className="w-5 h-5 md:w-7 md:h-7 text-[#008753]" />
+          </div>
+          <div className="text-left">
+            <p className="text-white text-lg md:text-xl font-semibold">
+              ThinkVantage Award — Overall Winner
+            </p>
+            <p className="text-[#77768C] text-sm md:text-base mt-1">
+              Ethica Microfinance Bank · 2026
+            </p>
+            <p className="text-[#B0B0B0] text-sm md:text-base mt-3">
+              Won the inaugural ThinkVantage innovation challenge, an internal
+              program where employees pitch ideas to improve operations, reduce
+              costs, and drive efficiency. Selected as overall winner after a
+              rigorous evaluation of submissions from across the company,
+              presented at the bank&apos;s H1 performance review.
+            </p>
+            <Link
+              href={
+                "https://ethicamfb.com/blog/ethica-launches-thinkvantage-rewards-innovative-staff"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-[#008753] text-sm md:text-base font-medium mt-3 hover:underline"
+            >
+              Read the announcement →
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* PRODUCTION PROJECTS SECTION */}
       <div
         className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10"
@@ -160,7 +198,7 @@ const App = () => {
             <Image
               src={Tax}
               alt="firs-tax-management-system"
-              className="w-full"
+              className="w-full rounded-xl"
             ></Image>
             <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
@@ -172,21 +210,12 @@ const App = () => {
                     View Details
                   </Button>
                 </Link>
-                <Link
-                  href={"https://tax-manager-mu.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Demo
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>
 
           <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image src={Bitooqoh} alt="bitooqoh" className="w-full"></Image>
+            <Image src={Bitooqoh} alt="bitooqoh" className="w-full rounded-xl"></Image>
             <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link
@@ -249,7 +278,11 @@ const App = () => {
           </div>
 
           <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image src={Mte} alt="mte" className="w-full"></Image>
+            <Image
+              src={Mte}
+              alt="muslim-tech-expo-nigeria"
+              className="w-full rounded-xl"
+            ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link href={"/mte"} className="text-white text-xl font-medium">
@@ -261,7 +294,42 @@ const App = () => {
                   </Button>
                 </Link>
                 <Link
-                  href={"https://mte-psi.vercel.app"}
+                  href={"https://www.muslimtechexpo.com"}
+                  className="text-white text-xl font-medium"
+                  target="_blank"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8 "
+                  >
+                    Visit Project
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative col-span-2 lg:col-span-1 w-full">
+            <Image
+              src={MteKenya}
+              alt="muslim-tech-expo-kenya"
+              className="w-full rounded-xl"
+            ></Image>
+            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
+              <div className="flex gap-3">
+                <Link
+                  href={"/mte-kenya"}
+                  className="text-white text-xl font-medium"
+                >
+                  <Button
+                    size={"lg"}
+                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
+                  >
+                    View Details
+                  </Button>
+                </Link>
+                <Link
+                  href={"https://kenya.muslimtechexpo.com"}
                   className="text-white text-xl font-medium"
                   target="_blank"
                 >
@@ -309,7 +377,7 @@ const App = () => {
             </div>
           </div>
 
-          <div className="relative col-span-2 lg:col-span-1 w-full">
+          {/* <div className="relative col-span-2 lg:col-span-1 w-full">
             <Image
               src={Kamyk}
               alt="kamyk"
@@ -340,10 +408,10 @@ const App = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image src={Payv} alt="payvantage" className="w-full"></Image>
+            <Image src={Payv} alt="payvantage" className="w-full rounded-xl"></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link
@@ -360,7 +428,7 @@ const App = () => {
           </div>
 
           <div className="relative col-span-2 w-full">
-            <Image src={Kenntechs} alt="kenntechs" className="w-full"></Image>
+            <Image src={Kenntechs} alt="kenntechs" className="w-full rounded-xl"></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link

@@ -21,6 +21,8 @@ const TaxDetails = () => {
   return (
     <ProjectDetails
       companyName="FIRS Tax Management System"
+      confidential
+      unavailableNote="This platform's backend has since been handed over to FIRS and is now an in-house government application, so the live version is no longer publicly viewable. The screenshots below reflect the system as I built it."
       about="An internal role-based tax administration platform developed for the Federal Inland Revenue Service (FIRS) to monitor, track, and manage tax remittances across Nigeria. The system enables Federal users, State officers, Regional coordinators, and Tax officers to efficiently oversee citizen tax compliance and revenue collection."
       technologies="TypeScript, Next.js, Apache echart, Shadcn"
       contributions={[
