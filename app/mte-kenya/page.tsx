@@ -15,8 +15,14 @@ const MteKenyaDetails = () => {
       technologies="TypeScript, Next.js, Shadcn, AOS"
       metrics={[
         { value: "1st edition", label: "East Africa's inaugural MTE event" },
-        { value: "Separate build", label: "own branding, hero, and content from MTE Nigeria" },
-        { value: "Nairobi", label: "hosted at KICC (Kenyatta International Conventional Centre)" },
+        {
+          value: "Separate build",
+          label: "own branding, hero, and content from MTE Nigeria",
+        },
+        {
+          value: "Nairobi",
+          label: "hosted at KICC (Kenyatta International Conventional Centre)",
+        },
       ]}
       contributions={[
         "Built a standalone site for MTE Kenya with its own branding and identity, distinct from the Nigeria edition.",
@@ -30,7 +36,7 @@ const MteKenyaDetails = () => {
         { src: ImageThree, alt: "image-three" },
         { src: ImageFour, alt: "image-four" },
       ]}
-      projectLink="https://kenya.muslimtechexpo.com"
+      projectLink="https://www.muslimtechexpo.co.ke"
       mainImage={{ src: MteKenya, alt: "muslim-tech-expo-kenya" }}
     />
   );

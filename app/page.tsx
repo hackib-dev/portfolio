@@ -69,7 +69,9 @@ const App = () => {
               <div className="flex gap-x-2 justify-center md:gap-x-3 xl:gap-x-5">
                 <div className="flex  items-center gap-1 md:gap-2 text-white">
                   <Image src={Engineer} alt="engineer"></Image>
-                  <p className="text-[9px] md:text-sm ">4+ yrs · Fintech &amp; Travel</p>
+                  <p className="text-[9px] md:text-sm ">
+                    4+ yrs · Fintech &amp; Travel
+                  </p>
                 </div>
                 <div className="flex items-center gap-1 md:gap-2 text-white">
                   <Image src={Location} alt="location"></Image>
@@ -215,7 +217,11 @@ const App = () => {
           </div>
 
           <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image src={Bitooqoh} alt="bitooqoh" className="w-full rounded-xl"></Image>
+            <Image
+              src={Bitooqoh}
+              alt="bitooqoh"
+              className="w-full rounded-xl"
+            ></Image>
             <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link
@@ -329,7 +335,7 @@ const App = () => {
                   </Button>
                 </Link>
                 <Link
-                  href={"https://kenya.muslimtechexpo.com"}
+                  href={"https://www.muslimtechexpo.co.ke"}
                   className="text-white text-xl font-medium"
                   target="_blank"
                 >
@@ -411,7 +417,11 @@ const App = () => {
           </div> */}
 
           <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image src={Payv} alt="payvantage" className="w-full rounded-xl"></Image>
+            <Image
+              src={Payv}
+              alt="payvantage"
+              className="w-full rounded-xl"
+            ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link
@@ -428,7 +438,11 @@ const App = () => {
           </div>
 
           <div className="relative col-span-2 w-full">
-            <Image src={Kenntechs} alt="kenntechs" className="w-full rounded-xl"></Image>
+            <Image
+              src={Kenntechs}
+              alt="kenntechs"
+              className="w-full rounded-xl"
+            ></Image>
             <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
               <div className="flex gap-3">
                 <Link
