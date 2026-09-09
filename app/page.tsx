@@ -212,6 +212,15 @@ const App = () => {
                     View Details
                   </Button>
                 </Link>
+                <Link
+                  href={"https://tax-manager-demo.vercel.app"}
+                  className="text-white text-xl font-medium underline"
+                  target="_blank"
+                >
+                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
+                    Visit Project
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

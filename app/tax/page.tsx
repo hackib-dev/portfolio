@@ -21,8 +21,7 @@ const TaxDetails = () => {
   return (
     <ProjectDetails
       companyName="FIRS Tax Management System"
-      confidential
-      unavailableNote="This platform's backend has since been handed over to FIRS and is now an in-house government application, so the live version is no longer publicly viewable. The screenshots below reflect the system as I built it."
+      unavailableNote="This platform's backend has since been handed over to FIRS and is now an in-house government application, so the original live version is no longer publicly viewable. The link above is a public demo I built on mock data so you can still explore the UI and workflows. Demo mode — log in with any of: national/national123 (National), state/state123 (State), taxoffice/taxoffice123 (Tax Office), regional/regional123 (Regional)."
       about="An internal role-based tax administration platform developed for the Federal Inland Revenue Service (FIRS) to monitor, track, and manage tax remittances across Nigeria. The system enables Federal users, State officers, Regional coordinators, and Tax officers to efficiently oversee citizen tax compliance and revenue collection."
       technologies="TypeScript, Next.js, Apache echart, Shadcn"
       contributions={[
@@ -49,7 +48,7 @@ const TaxDetails = () => {
         { src: ImageTwelve, alt: "image-twelve" },
         { src: ImageThirteen, alt: "image-thirteen" },
       ]}
-      projectLink="https://tax-manager-mu.vercel.app"
+      projectLink="https://tax-manager-demo.vercel.app"
       mainImage={{ src: Tax, alt: "firs-tax-management-system" }}
     />
   );
