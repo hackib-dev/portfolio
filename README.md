@@ -18,7 +18,7 @@ Codes nest. `S1.01` is the first case study and `S5.01` the first experiment. Co
 
 ## Getting started
 
-Requires Node 20.9 or later and **yarn**.
+Requires Node 24 and **yarn**. `package.json` pins `engines.node` to `24.x`, which Vercel uses for builds.
 
 ```bash
 yarn install
