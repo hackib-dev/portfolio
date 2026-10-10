@@ -1,703 +1,149 @@
-"use client";
-
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Profile from "../assets/profile.png";
-import Nigeria from "../assets/nigeria.png";
-import Engineer from "../assets/engineer.png";
-import Location from "../assets/map.png";
-import Map from "../assets/travel.png";
-import Available from "../assets/available.png";
-import Google from "../assets/google.png";
-import Udemy from "../assets/udemy.png";
-import SideHustle from "../assets/SideHustle.png";
-import Coursera from "../assets/coursera.png";
-import Jobberman from "../assets/Jobberman.png";
-import Mte from "../assets/mte.png";
-import MteKenya from "../assets/mteKenya.png";
-import Bitooqoh from "../assets/bitooqoh.png";
-import Cloudvantage from "../assets/cloudvantage/baseImage.png";
-import InstaShop from "../assets/instashop/imageOne.png";
-// import Kamyk from "../assets/kamyk.png";
-import Payv from "../assets/pvg.png";
-import Super from "../assets/super.png";
 import Link from "next/link";
-import Framework from "@/components/FrameworkCard/page";
-import NextJs from "../assets/next.png";
-import ReactIcon from "../assets/React-icon.png";
-import CrmDashboard from "../assets/crmdasboard.png";
-import Shadcn from "../assets/shadcn.png";
-import Sql from "../assets/sql.png";
-import Tools from "../assets/tools.png";
-import { Phone, Trophy } from "lucide-react";
-import Mail from "../assets/mail.png";
-import Linkedin from "../assets/Linkdin.png";
-import Kenntechs from "../assets/kenntechs.png";
-import Typescript from "../assets/Typescript.png";
-import Header from "@/components/Header/page";
-import HeroSection from "@/components/HeroSection/page";
-import { useRouter } from "next/navigation";
-import Flutter from "../assets/flutter.svg";
-import Tax from "../assets/tax.png";
-import Feeble from "../assets/feeble/imageOne.png";
-import Nova from "../assets/nova/imageOne.png";
+import { Arrival } from "@/features/arrival/Arrival";
+import { CoreTray } from "@/features/index/CoreTray";
+import { ContactLinks } from "@/features/connect/ContactLinks";
+import { Specimen } from "@/components/Specimen";
+import { PlateMeta } from "@/components/PlateHeader";
+import { SourceTag } from "@/components/SourceTag";
+import { featured } from "@/content/projects";
+import { publishedSignals } from "@/content/signals";
+import { Pressed } from "@/features/shell/Pressed";
+import { DescentLink } from "@/features/descent/DescentLink";
 
-const App = () => {
-  const router = useRouter();
+const statement = [
+  "Frontend Engineer at Payvantage, where I have worked since April 2022. I architected and launched Ethcore, the core banking platform for Ethica Microfinance Bank, and lead the frontend team that builds it.",
+  "My work spans web and mobile: Ethica Pass, a security token app I built on my own; an address verification SDK for KYC; features in the Ethica mobile app, used by 12,000+ people; and a role-based tax dashboard for FIRS. Outside Payvantage I build products for clients such as Super International Travels and Bitooqoh.",
+];
+
+export default function Home() {
+  const strip = publishedSignals.slice(0, 4);
   return (
-    <div className="relative">
-      <Header backgroundImage />
-      <HeroSection />
-      <div
-        className="flex flex-col items-center justify-center  px-5 md:px-10 xl:px-44 mx-auto text-center gap-y-2 md:gap-y-10"
-        id="about"
-      >
-        <div className="flex bg-[#232230] rounded-xl items-center justify-between mx-0 md:mx-5 xl:mx-20 mt-10 md:mt-10 xl:mt-10 md:p-5">
-          <div className="flex gap-x-3 md:gap-x-5 px-3 md:px-10 items-center">
-            <div>
-              <Image
-                src={Profile}
-                alt="Aqib profile"
-                className="w-8 md:w-16"
-              ></Image>
+    <>
+      <Arrival />
+
+      <Specimen as="section" name="Statement" layer="Index" id="index" className="plate" aria-labelledby="statement-title">
+        <div className="plate-grid">
+          <PlateMeta code="S0.1" label="In thirty seconds" />
+          <div className="flex flex-col gap-6">
+            <h2 id="statement-title" className="display text-[clamp(32px,4.6vw,60px)]" style={{ ["--wdth" as string]: 124 }}>
+              <Pressed text="Production fintech, built from the interface down." />
+            </h2>
+            <div className="prose-strata">
+              {statement.map((p) => (
+                <p key={p.slice(0, 20)}>{p}</p>
+              ))}
             </div>
-            <div className="flex flex-col md:justify-evenly py-3 md:py-">
-              <div className="flex items-center gap-2 text-white text-sm md:text-lg font-medium">
-                <p>Aqib Akinyele K.</p>
-                <Image src={Nigeria} alt="Nigeria"></Image>
-              </div>
-              <div className="flex gap-x-2 justify-center md:gap-x-3 xl:gap-x-5">
-                <div className="flex  items-center gap-1 md:gap-2 text-white">
-                  <Image src={Engineer} alt="engineer"></Image>
-                  <p className="text-[9px] md:text-sm ">
-                    4+ yrs · Fintech &amp; Travel
-                  </p>
-                </div>
-                <div className="flex items-center gap-1 md:gap-2 text-white">
-                  <Image src={Location} alt="location"></Image>
-                  <p className="text-[9px] md:text-sm ">Remote (Worldwide)</p>
-                </div>
-                <div className="flex items-center gap-1  md:gap-2 text-[#008753]">
-                  <Image src={Available} alt="available" width={12}></Image>
-                  <p className="text-[9px] md:text-sm ">Available</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden lg:block">
-            <Image src={Map} alt="travel" className="float-right"></Image>
-          </div>
-        </div>
-        <div>
-          <p className="text-[#B0B0B0] px-1 md:px-20 xl:px-40 md:text-xl mt-5 md:mt-0">
-            Frontend Developer who&apos;s shipped production apps across
-            fintech, real estate, travel, and live events, including the core
-            banking platform powering Ethica&apos;s mobile app and a ticketing
-            platform processing ₦190M+ in sales. Core stack: Next.js, React,
-            TypeScript. Recognized as Ethica Microfinance Bank&apos;s
-            ThinkVantage Award winner for driving operational innovation. Now
-            focused on growing into technical leadership.
-          </p>
-        </div>
-
-        <div className="mt-10 items-center flex flex-col justify-center mx-auto">
-          <p className="text-white px-5 md:px-40 uppercase text-center font-bold text-2xl md:text-4xl mb-8">
-            certifications
-          </p>
-          <div className="hidden md:flex justify-between items-center gap-x-16 justify-items-center text-center content-center">
-            <Image src={Coursera} alt="coursera" width={100}></Image>
-            <Image src={Udemy} alt="udemy" width={80}></Image>
-            <Image src={Google} alt="google" width={25}></Image>
-            <Image src={SideHustle} alt="sidehustle" width={100}></Image>
-            <Image src={Jobberman} alt="jobberman" width={100}></Image>
-          </div>
-          <div className="grid grid-cols-3 md:hidden justify-between place-items-center gap-x-8  gap-y-8 text-center">
-            <Image src={Coursera} alt="coursera" width={100}></Image>
-            <Image src={Udemy} alt="udemy" width={80}></Image>
-            <Image src={Google} alt="google" width={25}></Image>
-            <Image src={SideHustle} alt="sidehustle" width={100}></Image>
-            <Image src={Jobberman} alt="jobberman" width={100}></Image>
-          </div>
-          <div className="mt-10 flex gap-x-2 md:gap-x-4">
-            <Link
-              href={
-                "https://www.linkedin.com/in/aqib-akinyele/details/certifications"
-              }
-            >
-              <Button
-                size={"lg"}
-                className="bg-white text-[#121120] hover:bg-white hover:text-[#121120]"
-              >
-                View on Linkedin
-              </Button>
-            </Link>
-
-            <Link href={"https://github.com/hackib-dev"}>
-              <Button
-                size={"lg"}
-                variant={"outline"}
-                className="text-white bg-[#121120]"
-              >
-                Github
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* AWARDS & RECOGNITION SECTION */}
-      <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40">
-        <p className="text-white px-5 md:px-40 uppercase text-center font-bold text-2xl md:text-4xl mb-8">
-          Awards & Recognition
-        </p>
-        <div className="w-full max-w-2xl bg-[#232230] rounded-xl p-6 md:p-8 flex gap-4 md:gap-6 items-start">
-          <div className="shrink-0 w-10 h-10 md:w-14 md:h-14 rounded-full bg-[#008753] bg-opacity-20 flex items-center justify-center">
-            <Trophy className="w-5 h-5 md:w-7 md:h-7 text-[#008753]" />
-          </div>
-          <div className="text-left">
-            <p className="text-white text-lg md:text-xl font-semibold">
-              ThinkVantage Award — Overall Winner
+            <ul className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Quick facts">
+              <li className="label">Lagos, Nigeria</li>
+              <li className="label">React · Next.js · TypeScript · Flutter</li>
+              <li className="label">ThinkVantage Award, 2026</li>
+              <li className="label">Leads a frontend team</li>
+            </ul>
+            <p className="text-[16px] leading-snug text-ink-2">
+              I also run{" "}
+              <a href="https://kenntechs.vercel.app/" target="_blank" rel="noopener noreferrer" className="underline">
+                Kenntechs<span className="sr-only"> (opens in a new tab)</span>
+              </a>
+              , my technology venture.
             </p>
-            <p className="text-[#77768C] text-sm md:text-base mt-1">
-              Ethica Microfinance Bank · 2026
+            <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1 border-t border-vellum-3 pt-4 text-[15px] leading-snug text-ink-2">
+              <span className="label text-ink">Reading the codes</span>
+              <span>Sections are numbered by depth, like layers of rock: S0 at the surface, down to S6 at bedrock.</span>
             </p>
-            <p className="text-[#B0B0B0] text-sm md:text-base mt-3">
-              Won the inaugural ThinkVantage innovation challenge, an internal
-              program where employees pitch ideas to improve operations, reduce
-              costs, and drive efficiency. Selected as overall winner after a
-              rigorous evaluation of submissions from across the company,
-              presented at the bank&apos;s H1 performance review.
-            </p>
-            <Link
-              href={
-                "https://ethicamfb.com/blog/ethica-launches-thinkvantage-rewards-innovative-staff"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-[#008753] text-sm md:text-base font-medium mt-3 hover:underline"
-            >
-              Read the announcement →
+          </div>
+        </div>
+      </Specimen>
+
+      <Specimen as="section" name="FeaturedWork" layer="Index" className="plate pt-0" aria-labelledby="work-title">
+        <div className="plate-grid">
+          <PlateMeta code="S1" label="Work · core tray">
+            <Link href="/work" className="label underline">
+              All work →
             </Link>
+          </PlateMeta>
+          <div className="flex min-w-0 flex-col gap-3">
+            <h2 id="work-title" className="display text-[clamp(28px,3.6vw,44px)]" style={{ ["--wdth" as string]: 118 }}>
+              <Pressed text="Eight production systems, cored" />
+            </h2>
+            <p className="max-w-[60ch] text-[17px] leading-snug text-ink-2">
+              Each core is one system. Its bands are its makeup: what it runs on, whether it can be shown, how many
+              technologies it took. Hover or focus a core to pull it from the tray.
+            </p>
           </div>
         </div>
-      </div>
+        <div className="mt-10">
+          <CoreTray projects={featured} />
+        </div>
+      </Specimen>
 
-      {/* PRODUCTION PROJECTS SECTION */}
-      <div
-        className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10"
-        id="projects"
-      >
-        <p className="text-white px-28 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
-          Production Projects
-        </p>
-        <p className="text-[#B0B0B0] px-5 md:px-40 text-lg text-center font-medium mb-8">
-          Real-world applications serving thousands of users
-        </p>
-        <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-y-10">
-          {/* FEATURED PROJECT - FIRS Tax Management */}
-          <div className="relative col-span-2 w-full">
-            <Image
-              src={Tax}
-              alt="firs-tax-management-system"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link href={"/tax"} className="text-white text-xl font-medium">
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-              </div>
+      <Specimen as="section" name="SignatureExperiment" layer="Index" aria-labelledby="sig-title">
+        <DescentLink href="/lab/fault-lines" word="Lab" className="descent-link">
+          <span className="sig">
+            <span className="flex flex-col gap-3">
+              <span className="code-tag">S5.01 · Descend to the Lab</span>
+              <span id="sig-title" className="display text-[clamp(40px,6.4vw,92px)] leading-[0.9]" style={{ ["--wdth" as string]: 118 }}>
+                Fault lines
+              </span>
+              <span className="max-w-[50ch] text-[18px] leading-snug">
+                State a product requirement and watch it run through the FIRS role rules: four interfaces reshape, and the rules
+                beneath them fault where they stop agreeing.
+              </span>
+            </span>
+            <span className="sig-cores" aria-hidden="true">
+              {[0, 1, 2, 3].map((i) => (
+                <span key={i} className="sig-core" data-faulted={i === 1 || undefined}>
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                </span>
+              ))}
+            </span>
+          </span>
+          <span aria-hidden="true" className="font-display text-[48px] leading-none">
+            ↓
+          </span>
+        </DescentLink>
+      </Specimen>
+
+      <Specimen as="section" name="SignalStrip" layer="Index" className="plate rule" aria-labelledby="signals-title">
+        <div className="plate-grid">
+          <PlateMeta code="S2" label="Signals · strip log">
+            <Link href="/signals" className="label underline">
+              Full assay →
+            </Link>
+          </PlateMeta>
+          <h2 id="signals-title" className="display text-[clamp(28px,3.6vw,44px)]" style={{ ["--wdth" as string]: 114 }}>
+            <Pressed text="Evidence, logged" />
+          </h2>
+        </div>
+        <dl className="strip-log mt-10">
+          {strip.map((s, i) => (
+            <div key={s.id} className="strip-col">
+              <dt className="label text-ink-2">
+                <span className="code-tag">S2.{String(i + 1).padStart(2, "0")}</span> {s.sample}
+              </dt>
+              <dd className="strip-value display">{s.value}</dd>
+              <dd className="m-0 text-[15.5px] leading-snug">{s.context}</dd>
+              <dd className="m-0 mt-auto">
+                <SourceTag source={s.source} />
+              </dd>
             </div>
-          </div>
+          ))}
+        </dl>
+      </Specimen>
 
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={Bitooqoh}
-              alt="bitooqoh"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bottom-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/bitooqoh"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-                <Link
-                  href={"https://bitooqoh.com"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={Super}
-              alt="super-international-travels"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/super"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-                <Link
-                  href={"https://superinttravels.com/"}
-                  className="text-white text-xl font-medium"
-                  target="_blank"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8 "
-                  >
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={Mte}
-              alt="muslim-tech-expo-nigeria"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link href={"/mte"} className="text-white text-xl font-medium">
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-                <Link
-                  href={"https://www.muslimtechexpo.com"}
-                  className="text-white text-xl font-medium"
-                  target="_blank"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8 "
-                  >
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={MteKenya}
-              alt="muslim-tech-expo-kenya"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/mte-kenya"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-                <Link
-                  href={"https://www.muslimtechexpo.co.ke"}
-                  className="text-white text-xl font-medium"
-                  target="_blank"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8 "
-                  >
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={Cloudvantage}
-              alt="cloudvantage"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/cloudvantage"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-
-                <Link
-                  href={"https://cloud-vantage.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={Kamyk}
-              alt="kamyk"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/kamyk"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-
-                <Link
-                  href={"https://kamyk.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div> */}
-
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={Payv}
-              alt="payvantage"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"https://www.payvantage.com.ng"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 w-full">
-            <Image
-              src={Kenntechs}
-              alt="kenntechs"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"https://kenntechs.vercel.app/"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white  h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
+      <Specimen as="section" name="Contact" layer="Index" className="plate rule" aria-labelledby="contact-title">
+        <div className="plate-grid">
+          <PlateMeta code="S6" label="Connect" />
+          <div className="flex flex-col gap-5">
+            <h2 id="contact-title" className="display text-[clamp(28px,3.6vw,44px)]" style={{ ["--wdth" as string]: 110 }}>
+              <Pressed text="Working on something serious?" />
+            </h2>
+            <ContactLinks />
           </div>
         </div>
-      </div>
-
-      {/* TECHNICAL ASSESSMENTS SECTION */}
-      <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10">
-        <p className="text-white px-28 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
-          Technical Assessments
-        </p>
-        <p className="text-[#B0B0B0] px-5 md:px-40 text-lg text-center font-medium mb-8">
-          Code challenges showcasing technical expertise
-        </p>
-        <div className="grid grid-cols-2 justify-between items-center gap-x-5 md:gap-x-16 justify-items-center text-center content-center gap-y-10">
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={Feeble}
-              alt="feeble-assessment"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/feeble"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-
-                <Link
-                  href={"https://feeble-assessment.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={Nova}
-              alt="novacrust-assessment"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/novacrust"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-
-                <Link
-                  href={"https://novacrust-assessment-lovat.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={CrmDashboard}
-              alt="crm-dashboard"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/crm-dashboard"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-
-                <Link
-                  href={"https://crm-dashboard-gray.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 lg:col-span-1 w-full">
-            <Image
-              src={InstaShop}
-              alt="instashop"
-              className="w-full rounded-xl"
-            ></Image>
-            <div className="absolute inset-0 bg-[#121120] bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-[3%]">
-              <div className="flex gap-3">
-                <Link
-                  href={"/instashop"}
-                  className="text-white text-xl font-medium"
-                >
-                  <Button
-                    size={"lg"}
-                    className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8"
-                  >
-                    View Details
-                  </Button>
-                </Link>
-
-                <Link
-                  href={"https://instashop-test.vercel.app"}
-                  className="text-white text-xl font-medium underline"
-                  target="_blank"
-                >
-                  <Button className="bg-white text-[#121120] text-sm md:text-lg hover:bg-white h-9 px-3 md:h-11 md:px-8">
-                    Visit Project
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* FRAMEWORKS & TECH SECTION */}
-        <div className="mt-10 items-center flex flex-col justify-center mx-auto px-5 md:px-10 xl:px-40 py-10">
-          <p className="text-white px-5 md:px-5 xl:px-32 uppercase text-center font-bold text-2xl md:text-4xl mb-1">
-            Frameworks & Tech
-          </p>
-          <p className="text-[#B0B0B0] px-2 text-center font-medium mb-2">
-            These are the tools and frameworks with which I feel comfortable
-            without limiting myself to them because I have worked with Python,
-            MySQL, CodeIgniter and others...
-          </p>
-          <p className="text-[#B0B0B0] text-lg text-center font-medium mb-8">
-            My main stack is:
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <Framework
-            body={"App dir, Routing, Layouts, Loading UI and API routes."}
-            title={"Next.js"}
-            framworkImage={NextJs}
-          />
-
-          <Framework
-            body={"Server and Client Components."}
-            title={"React.js"}
-            framworkImage={ReactIcon}
-          />
-
-          <Framework
-            body={"Building Mobile Apps. Android and IOS"}
-            title={"Flutter"}
-            framworkImage={Flutter}
-          />
-
-          <Framework
-            body={
-              "Using TypeScript with Next.js improves type safety, development efficiency, and scalability."
-            }
-            title={"TypeScript"}
-            framworkImage={Typescript}
-          />
-
-          <Framework
-            body={"UI components styled with Tailwind CSS."}
-            title={"Shadcn"}
-            framworkImage={Shadcn}
-          />
-
-          <Framework
-            body={"SQLyog used for querying database."}
-            title={"Database"}
-            framworkImage={Sql}
-          />
-        </div>
-      </div>
-      <Image
-        src={Tools}
-        alt="tools"
-        className="mx-auto w-full md:w-[600px]"
-      ></Image>
-      <p className="text-white px-5 md:px-32 uppercase text-center font-medium text-xl mb-5">
-        Contact
-      </p>
-      <div
-        className="px-5 flex gap-10 mt-3 md:mt-0 items-center justify-center pb-10 text-[#B0B0B0]"
-        id="contact"
-      >
-        <Link
-          href={"mailto:aqibkenn@gmail.com"}
-          className="flex gap-2 items-center"
-        >
-          <Image src={Mail} alt="" className="w-9 h-9" />
-          <p>Mail</p>
-        </Link>
-
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href={"https://www.linkedin.com/in/aqib-akinyele"}
-          className="flex gap-2 items-center"
-        >
-          <Image src={Linkedin} alt="" className="w-9 h-9" />
-          <p>Linkedin</p>
-        </Link>
-
-        <Link
-          target="_blank"
-          rel="noopener noreferrer"
-          href={"https://api.whatsapp.com/send/?phone=2348118888108"}
-          className="flex gap-2 items-center"
-        >
-          <Phone className="w-5 h-5" color="white" />
-          <p>Whatsapp</p>
-        </Link>
-      </div>
-    </div>
+      </Specimen>
+    </>
   );
-};
-
-export default App;
+}
