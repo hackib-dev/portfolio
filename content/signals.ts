@@ -10,7 +10,7 @@ export const signals: Signal[] = [
   {
     id: "ethica-users",
     sample: "Ethica mobile app",
-    value: "12,000+",
+    value: "50,000+",
     context:
       "Users on Ethica Microfinance Bank's mobile banking app. I built its discounts on bills and utilities (airtime, data, cable TV, electricity), the KYC tier 1 to 2 and tier 2 to 3 upgrades, and target savings.",
     source: { kind: "aqib", said: "2026-10" },

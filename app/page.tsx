@@ -12,7 +12,7 @@ import { DescentLink } from "@/features/descent/DescentLink";
 
 const statement = [
   "Frontend Engineer at Payvantage, where I have worked since April 2022. I architected and launched Ethcore, the core banking platform for Ethica Microfinance Bank, and lead the frontend team that builds it.",
-  "My work spans web and mobile: Ethica Pass, a security token app I built on my own; an address verification SDK for KYC; features in the Ethica mobile app, used by 12,000+ people; and a role-based tax dashboard for FIRS. Outside Payvantage I build products for clients such as Super International Travels and Bitooqoh.",
+  "My work spans web and mobile: Ethica Pass, a security token app I built on my own; an address verification SDK for KYC; features in the Ethica mobile app, used by 50,000+ people; and a role-based tax dashboard for FIRS. Outside Payvantage I build products for clients such as Super International Travels and Bitooqoh.",
 ];
 
 export default function Home() {
